@@ -22,9 +22,14 @@ a {
 }
 
 .greeting {
-    text-align: center;
+    width: fit-content;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
     font-family: 'Roboto Mono', monospace;
     font-size: 48px;
+    animation: cursor 1s infinite step-end;
+    border-right: 4px #698 solid;
 }
 
 .portfolio {
@@ -44,5 +49,14 @@ a {
 
 .tag {
     color: #ddd;
-    font-style: italic;
+}
+
+@keyframes cursor {
+    from, to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #698;
+    }
 }
