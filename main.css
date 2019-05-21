@@ -16,20 +16,15 @@ a {
 }
 
 .warning {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     color: #ccc;
 }
 
 .greeting {
-    width: fit-content;
-    margin: auto;
-    overflow: hidden;
-    white-space: nowrap;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 48px;
-    animation: cursor 1s infinite step-end;
-    border-right: 4px #698 solid;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 72px;
 }
 
 .portfolio {
@@ -37,7 +32,7 @@ a {
 }
 
 .introduction {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     color: #888;
 }
@@ -48,15 +43,6 @@ a {
 }
 
 .tag {
-    color: #ddd;
-}
-
-@keyframes cursor {
-    from, to {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: #698;
-    }
+    color: #eee;
+    font-style: italic;
 }
