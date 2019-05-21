@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.link {
+    color: #698;
+}
+
+.link:hover {
+    color: #476;
+}
+
+.warning {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    color: #ccc;
+}
+
+.greeting {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 48px;
+}
+
+.portfolio {
+    margin: 144px;
+}
+
+.introduction {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    color: #888;
+}
+
+.name {
+    color: #698;
+    font-weight: 700;
+}
+
+.tag {
+    color: #ddd;
+    font-style: italic;
+}
