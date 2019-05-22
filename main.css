@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+}
+
 a {
     text-decoration: none;
 }
@@ -12,29 +20,73 @@ a {
 }
 
 .link:hover {
-    color: #476;
-}
-
-.warning {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
-    color: #ccc;
+    color: #254;
 }
 
 .greeting {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 8px;
     text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Product Sans', sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.text {
+    font-family: 'Product Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #222;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.green .text {
+    color: #fff;
+}
+
+.title {
     font-size: 72px;
 }
 
-.portfolio {
-    margin: 144px;
+.green {
+    background-color: #698;
+}
+
+.spacer {
+    height: 36px;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
 }
 
 .introduction {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
-    color: #888;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.projects {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.green-text {
+    color: #698;
+}
+
+.see-more {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .name {
@@ -42,9 +94,38 @@ a {
     font-weight: 700;
 }
 
-.tag {
-    color: #eee;
-    font-style: italic;
+.load {
+    animation: loadAnimation 1s ease;
+}
+
+.load-down {
+    animation: loadDownAnimation 3s ease;
+}
+
+@keyframes loadAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(96px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes loadDownAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media only screen and (max-width: 960px) {
@@ -56,7 +137,7 @@ a {
         font-size: 36px;
     }
 
-    .introduction, .warning {
+    .text {
         font-size: 24px;
     }
 }
