@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background-color: #fff;
+    background-color: #eee;
 }
 
 a {
@@ -99,7 +99,7 @@ a {
 }
 
 .load-down {
-    animation: loadDownAnimation 3s ease;
+    animation: loadDownAnimation 2s ease;
 }
 
 @keyframes loadAnimation {
