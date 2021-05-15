@@ -1,143 +1,41 @@
-* {
-    margin: 0;
-    padding: 0;
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-html {
-    scroll-behavior: smooth;
+.content {
+  animation: load 1s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
-body {
-    background-color: #eee;
+@keyframes wave {
+  from {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+.waving {
+  display: inline-block;
+  animation: wave 1s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.emphasis {
+  color: #309adb;
 }
 
 a {
-    text-decoration: none;
+  color: #309adb;
 }
 
-.link {
-    color: #698;
-}
-
-.link:hover {
-    color: #254;
-}
-
-.greeting {
-    background-color: #222;
-    border-radius: 8px;
-    padding: 8px;
-    text-align: center;
-    font-family: 'Product Sans', sans-serif;
-    font-size: 72px;
-    font-weight: 400;
-    color: #fff;
-}
-
-.text {
-    font-family: 'Product Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #222;
-    text-align: justify;
-    text-justify: auto;
-}
-
-.green .text {
-    color: #fff;
-}
-
-.title {
-    font-size: 72px;
-}
-
-.green {
-    background-color: #698;
-}
-
-.spacer {
-    height: 36px;
-}
-
-.container {
-    height: 100vh;
-    width: 100vw;
-}
-
-.introduction {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.projects {
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.green-text {
-    color: #698;
-}
-
-.see-more {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.name {
-    color: #698;
-    font-weight: 700;
-}
-
-.load {
-    animation: loadAnimation 1s ease;
-}
-
-.load-down {
-    animation: loadDownAnimation 2s ease;
-}
-
-@keyframes loadAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(96px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-@keyframes loadDownAnimation {
-    0% {
-        opacity: 0;
-    }
-
-    66% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@media only screen and (max-width: 960px) {
-    .portfolio {
-        margin: 36px;
-    }
-
-    .greeting {
-        font-size: 36px;
-    }
-
-    .text {
-        font-size: 24px;
-    }
+a:hover {
+  opacity: 0.5;
 }
