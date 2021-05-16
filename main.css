@@ -1,30 +1,33 @@
 @keyframes load {
   from {
     opacity: 0;
+    transform: translateY(1rem);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .content {
-  animation: load 1s cubic-bezier(0.5, 0, 0.5, 1);
+  animation: load 1s;
 }
 
 @keyframes wave {
   from {
-    transform: rotate(20deg);
+    transform: rotate(0);
   }
   50% {
-    transform: rotate(30deg);
+    transform: rotate(5deg);
   }
   to {
-    transform: rotate(20deg);
+    transform: rotate(0);
   }
 }
 
 .waving {
   display: inline-block;
+  transform-origin: bottom right;
   animation: wave 1s infinite cubic-bezier(0.5, 0, 0.5, 1);
 }
 
