@@ -1,12 +1,12 @@
 import { PageTitle, ProjectCard } from "@/components";
-import gemuboi from "../../../public/gemuboi.png";
+import GemuboiScreenshot from "../../../public/gemuboi.png";
 
 const PROJECTS = [
   {
     title: "gemuboi.js",
     description:
       "A browser-based Game Boy emulator with audio support and support for persistent game save storage, built in pure vanilla JavaScript.",
-    image: gemuboi,
+    image: GemuboiScreenshot,
     link: "https://gemuboi.danwsong.com/",
   },
 ];

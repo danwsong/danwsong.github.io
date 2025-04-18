@@ -1,4 +1,5 @@
-import { Link } from "@/components";
+import { NAV_LINKS } from "@/common";
+import { Link, MobileMenuButton } from "@/components";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -27,20 +28,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen font-sans`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="fixed top-0 flex justify-between items-center border-b-1 w-full bg-background p-8">
+        <header className="fixed top-0 flex justify-between items-center border-b-1 bg-background w-full p-8 z-10">
           <Link
             href="/"
             className="font-mono after:content-['\_'] after:animate-blink"
           >
             daniel song
           </Link>
-          <nav className="flex gap-8">
-            <Link href="/">home</Link>
-            <Link href="/projects">projects</Link>
-            <Link href="/photos">photography</Link>
+          <nav className="hidden md:flex gap-8">
+            {NAV_LINKS.map(({ name, url }) => (
+              <Link href={url} key={name}>
+                {name}
+              </Link>
+            ))}
           </nav>
+          <MobileMenuButton />
         </header>
         <main className="pt-30.25 px-8 pb-8 md:max-w-200 m-auto">
           {children}
